@@ -1,6 +1,6 @@
 # dependabot-alerts
 
-Script to fetch dependabot-alerts for all repositories.
+Script to fetch dependabot alerts for all repositories.
 
 ## Usage
 
@@ -20,11 +20,11 @@ export GH_TOKEN=your_github_token_here
 ### Script ausführen
 
 ```sh
-./dependabot-alerts.sh your_github_username
+./01_dependabot-alerts.sh your_github_username
 ```
 
 #### Beispiel
 
 ```sh
-./dependabot-alerts.sh hofiorg
+./01_dependabot-alerts.sh hofiorg
 ```

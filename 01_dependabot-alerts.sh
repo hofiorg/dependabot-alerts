@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-USERNAME="$1"
+USERNAME="${1:-hofiorg}"
 GH_TOKEN="${GH_TOKEN:?Bitte GH_TOKEN Umgebungsvariable setzen}"
 
 echo "📦 Lade Repository-Liste für Benutzer '$USERNAME'..."
