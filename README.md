@@ -1,29 +1,29 @@
 # dependabot-alerts
 
-Script to fetch dependabot alerts for all repositories.
+Script to fetch [Dependabot](https://github.com/dependabot) alerts for all repositories.
 
 ## Usage
 
-### GitHub Token erstellen
+### Create a GitHub Token
   
-Erstelle unter 👉 <https://github.com/settings/tokens> einen fine-grained oder classic token mit diesen Rechten:
+Create a fine-grained or classic token at 👉 <https://github.com/settings/tokens> with the following permissions:
 
-- repo (für private Repos, falls vorhanden)
-- security_events (für Dependabot Alerts)
+- repo (for private repositories, if applicable)
+- security_events (for Dependabot alerts)
 
-### Token in Umgebungsvariable setzen
+### Set Token as Environment Variable
 
 ```sh
 export GH_TOKEN=your_github_token_here
 ```
 
-### Script ausführen
+### Run the Script
 
 ```sh
 ./dependabot-alerts your_github_username
 ```
 
-#### Beispiel
+#### Example
 
 ```sh
 ./dependabot-alerts hofiorg
