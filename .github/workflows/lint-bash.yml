@@ -1,12 +1,9 @@
 name: Lint Bash Scripts
 
-on:
-  push:
-    paths:
-      - '**.sh'
-  pull_request:
-    paths:
-      - '**.sh'
+on: [push]
+
+permissions:
+  contents: read
 
 jobs:
   shellcheck:
