@@ -1,7 +1,8 @@
 # dependabot-alerts
 
 ![Shell Script](https://img.shields.io/badge/Bash-Script-blue?logo=gnubash)
-![License](https://img.shields.io/badge/license-MIT-green)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![ShellCheck](https://github.com/hofiorg/dependabot-alerts/actions/workflows/lint-bash.yml/badge.svg)
 ![Status](https://img.shields.io/badge/status-stable-brightgreen)
 
 A script to fetch [Dependabot](https://github.com/dependabot) alerts for all repositories of a GitHub user.
