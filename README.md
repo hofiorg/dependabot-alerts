@@ -20,11 +20,11 @@ export GH_TOKEN=your_github_token_here
 ### Script ausführen
 
 ```sh
-./01_dependabot-alerts.sh your_github_username
+./dependabot-alerts your_github_username
 ```
 
 #### Beispiel
 
 ```sh
-./01_dependabot-alerts.sh hofiorg
+./dependabot-alerts hofiorg
 ```
