@@ -1,11 +1,22 @@
-#!/bin/bash 
+#!/bin/bash
 
 USERNAME="${1:-hofiorg}"
-GH_TOKEN="${GH_TOKEN:?Bitte GH_TOKEN Umgebungsvariable setzen}"
+GH_TOKEN="${GH_TOKEN:?Please set the GH_TOKEN environment variable}"
 
-echo "📦 Lade Repository-Liste für Benutzer '$USERNAME'..."
-repos=$(curl -s -H "Authorization: Bearer $GH_TOKEN" \
-  "https://api.github.com/users/$USERNAME/repos?per_page=100" | jq -r '.[].name')
+echo "📦 Fetching repository list for user '$USERNAME'..."
+
+repos_response=$(curl -s -H "Authorization: Bearer $GH_TOKEN" \
+  "https://api.github.com/users/$USERNAME/repos?per_page=100")
+
+is_array=$(echo "$repos_response" | jq 'if type == "array" then true else false end' 2>/dev/null)
+
+if [ "$is_array" != "true" ]; then
+  message=$(echo "$repos_response" | jq -r '.message // "Unknown error"' 2>/dev/null)
+  echo "❌ Failed to load repositories for user '$USERNAME': $message"
+  exit 1
+fi
+
+repos=$(echo "$repos_response" | jq -r '.[].name')
 
 printf "%-30s %s\n" "Repository" "Status"
 printf "%-30s %s\n" "------------------------------" "------"
