@@ -1,9 +1,8 @@
 # dependabot-alerts
 
-![Shell Script](https://img.shields.io/badge/Bash-Script-blue?logo=gnubash)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![ShellCheck](https://github.com/hofiorg/dependabot-alerts/actions/workflows/lint-bash.yml/badge.svg)
-![Status](https://img.shields.io/badge/status-stable-brightgreen)
+[![Shell Script](https://img.shields.io/badge/Bash-Script-blue?logo=gnubash)](https://github.com/hofiorg/dependabot-alerts/blob/main/dependabot-alerts)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/hofiorg/dependabot-alerts/blob/main/LICENSE)
+[![ShellCheck](https://github.com/hofiorg/dependabot-alerts/actions/workflows/lint-bash.yml/badge.svg)](https://github.com/hofiorg/dependabot-alerts/actions/workflows/lint-bash.yml)
 
 A script to fetch [Dependabot](https://github.com/dependabot) alerts for all repositories of a GitHub user.
 
