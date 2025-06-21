@@ -6,14 +6,14 @@
 
 A script to fetch [Dependabot](https://github.com/dependabot) alerts for all repositories of a GitHub user.
 
-## Prerequisites
+## 🛠️ Prerequisites
 
 This script requires the following tools to be installed on your system:
 
 - [`curl`](https://curl.se/) — for making HTTP requests to the GitHub API  
 - [`jq`](https://stedolan.github.io/jq/) — for parsing JSON responses in Bash
 
-### Check if they are installed
+### ☑️ Check if they are installed
 
 Run the following commands to verify:
 
@@ -24,7 +24,7 @@ which jq
 
 If either command returns no path, you need to install the missing tools.
 
-## Installation
+## 📥 Installation
 
 ### On Ubuntu (including WSL)
 
@@ -33,14 +33,14 @@ sudo apt update
 sudo apt install -y curl jq
 ```
 
-### Set up the GitHub Personal Access Token
+### 🔐 Set up the GitHub Personal Access Token
   
 Create a fine-grained or classic token at 👉 <https://github.com/settings/tokens> with the following permissions:
 
 - `repo` (for private repositories, if applicable)
 - `security_events` (for Dependabot alerts)
 
-### Set the token as Environment Variable
+### 🌍 Set the token as Environment Variable
 
 ```sh
 export GH_TOKEN=your_github_token_here
@@ -48,7 +48,7 @@ export GH_TOKEN=your_github_token_here
 
 To make this persistent, add the above line to your `~/.bashrc` or `~/.zshrc`.
 
-### Usage
+### 🚀 Usage
 
 Run the script as follows:
 
@@ -58,14 +58,14 @@ Run the script as follows:
 
 If no username is provided, it defaults to `hofiorg`.
 
-#### Examples
+#### 🧪 Examples
 
 ```sh
 ./dependabot-alerts
 ./dependabot-alerts octocat
 ```
 
-#### Output Example
+#### 📊 Output Example
 
 When you run the script, you'll see a table like this:
 
